@@ -1,0 +1,96 @@
+nodes
+
+facts //know about nodes
+
+facter 
+facter ipaddress
+facter interfaces
+facter operatingsystem
+facter os
+
+#puppetmaster - Configuring nodes
+#puppetDB  - installation of 
+#puppetCA - Certificate authority  - TLS CA/x.509
+puppet cert list
+DSL -Domain specific language
+control sturctures /Resources
+Types /Attributes
+manifests //source file of puppet - 
+
+
+#Puppet certification
+
+puppet cert list
+puppet agent -t //new key for puppet agent
+puppet cert sign puppetagent
+puppet agent -t
+
+#In Puppet master file
+
+vi /etc/puppet/manifests/site.pp
+
+In SIte.pp
+
+file {'/etc/inetd.conf':
+ ensure => '/etc/inet/inetd.conf',
+ }
+	
+#In Puppet Agent Machine	
+	
+	puppet agent -t
+	
+	ls /etc/inetd.conf
+	
+#In Puppet master file
+	
+vi /etc/puppet/manifests/site.pp	
+
+package { 'httpd':
+ ensure => installed,
+ }
+service { 'httpd':
+ ensure => running,
+ }
+ 
+ puppet module install puppetlabs-mysql --version 3.10.0
+ puppet module install mayflower-php --version 4.0.0-beta1
+ 
+ 
+ ls /etc/puppet/modules
+ 
+ vi /etc/puppet/manifests/site.pp
+ 
+ include '::mysql::server'
+ include '::php'
+ 
+ 
+ puppet agent -t
+ 
+ mysql -v
+ php -version
+ 
+"C:\Program Files (x86)\NUnit.org\nunit-console.exe" SeleniumNUnitParam/bin/Debug/SeleniumNUnitParam.dll
+
+"C:\Nunit\nuget\nuget.exe" restore SeleniumNUnitParam.sln
+
+
+
+SeleniumNUnitParam.sln
+
+/t:rebuild /p:VisualStudioVersion=12.0
+			/p:Configuration=Release /p:DeployOnBuild=True
+			
+
+C:\Pr\IIS\Microsoft v3\msdeploy.exe
+-verb=sync
+-source:package=D{\workspace\Testjenkins\TestJenkins\Obj\Release\Package\TestJenkins.ZIP
+-dest:auto,computerName=https://192.168.1.11:7878/msdeploy.axd?site=TestJenkins,userName=deploy\administrator,password=abc@1234,authType=basic
+-setparam:"IIS Web Application Name"="TestJenkins" - allowUntrusted=true
+
+ 
+ 
+ 
+ 
+ 
+ 
+	
